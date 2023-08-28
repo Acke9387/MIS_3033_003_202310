@@ -6,6 +6,9 @@
         xmlns:local="clr-namespace:In_Class_Examples"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Background>
+        <ImageBrush ImageSource="https://www.pupvine.com/wp-content/uploads/2021/02/F1b-Sheepadoodle-The-Right-Dog-For-You-Find-The-Facts-Here.jpg"/>
+    </Window.Background>
     <Grid>
         <Button Content="Click Me" HorizontalAlignment="Left" Margin="302,235,0,0" VerticalAlignment="Top" Height="45" Width="120" Click="Button_Click"/>
         <Label x:Name="lblOutput" Content="Message will appear here" HorizontalAlignment="Left" Margin="335,115,0,0" VerticalAlignment="Top" Width="174"/>
