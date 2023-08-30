@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,10 +22,34 @@ namespace FirstWPFApplication
     public partial class MainWindow : Window
     {
 
-        List<Student> students = new List<Student>();
+        //List<Student> students = new List<Student>();
         public MainWindow()
         {
             InitializeComponent();
+
+            //read csv file from computer
+            string[] lines =File.ReadAllLines("Students.csv");
+
+          
+
+            //loop through each line skipping the first
+
+            foreach (string line in lines.Skip(1))
+            {
+
+                //split the line into parts
+                string[] parts = line.Split(',');
+
+                //create a student object
+                Student student = new Student();
+                student.Name = $"{parts[1]}, {parts[0]}";
+                student.Birthdate = Convert.ToDateTime(parts[2]);
+
+                //add the student to the list
+                //students.Add(student);
+                lstStudents.Items.Add(student);
+            }
+
         }
 
         private void btnCreateStudent_Click(object sender, RoutedEventArgs e)
@@ -36,7 +61,8 @@ namespace FirstWPFApplication
             student.Birthdate = birthdate;
             student.Name = name;
 
-            students.Add(student);
+            //students.Add(student);
+            lstStudents.Items.Add(student);
             ClearTextBoxes();
 
             MessageBox.Show($"{student.Name} was created and they are {student.CalculateAge().ToString("N0")} years old.");
@@ -63,6 +89,12 @@ namespace FirstWPFApplication
             txtName.Text = string.Empty;
             txtDob.Text = string.Empty;
             txtName.Focus();
+        }
+
+        private void lstStudents_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            Student selectedStudent = (Student)lstStudents.SelectedItem;
+            MessageBox.Show($"{selectedStudent.Name} was created and they are {selectedStudent.CalculateAge().ToString("N0")} years old.");
         }
     }
 }

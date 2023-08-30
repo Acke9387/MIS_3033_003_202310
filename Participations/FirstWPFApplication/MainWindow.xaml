@@ -11,8 +11,9 @@
         <TextBox x:Name="txtName" HorizontalAlignment="Left" Margin="238,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Enter your dob:" HorizontalAlignment="Left" Margin="114,126,0,0" VerticalAlignment="Top" Foreground="#FFF6F2F2" FontWeight="Bold"/>
         <TextBox x:Name="txtDob" HorizontalAlignment="Left" Margin="238,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnCreateStudent" Content="Create" HorizontalAlignment="Left" Margin="238,217,0,0" VerticalAlignment="Top" Height="54" Width="162" Click="btnCreateStudent_Click" MouseEnter="btnCreateStudent_MouseEnter" MouseLeave="btnCreateStudent_MouseLeave" IsDefault="True"/>
-        <Button x:Name="btnClear" Content="Clear" HorizontalAlignment="Left" Margin="436,217,0,0" VerticalAlignment="Top" Height="54" Width="162" Click="btnClear_Click" IsCancel="True"/>
+        <Button x:Name="btnCreateStudent" Content="Create" HorizontalAlignment="Left" Margin="94,203,0,0" VerticalAlignment="Top" Height="54" Width="162" Click="btnCreateStudent_Click" MouseEnter="btnCreateStudent_MouseEnter" MouseLeave="btnCreateStudent_MouseLeave" IsDefault="True"/>
+        <Button x:Name="btnClear" Content="Clear" HorizontalAlignment="Left" Margin="291,203,0,0" VerticalAlignment="Top" Height="54" Width="162" Click="btnClear_Click" IsCancel="True"/>
+        <ListBox x:Name="lstStudents" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="503,0,0,0" Background="#BFFFFFFF" MouseDoubleClick="lstStudents_MouseDoubleClick"/>
 
     </Grid>
 </Window>
