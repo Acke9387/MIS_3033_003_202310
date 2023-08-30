@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FirstWPFApplication"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="450" Width="800" Background="#FFF60606">
+    <Grid x:Name="grdMain">
+        <Label Content="Enter your name:" HorizontalAlignment="Left" Margin="114,82,0,0" VerticalAlignment="Top" Foreground="#FFF6F2F2" FontWeight="Bold"/>
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" Margin="238,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Enter your dob:" HorizontalAlignment="Left" Margin="114,126,0,0" VerticalAlignment="Top" Foreground="#FFF6F2F2" FontWeight="Bold"/>
+        <TextBox x:Name="txtDob" HorizontalAlignment="Left" Margin="238,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnCreateStudent" Content="Create" HorizontalAlignment="Left" Margin="238,217,0,0" VerticalAlignment="Top" Height="54" Width="162" Click="btnCreateStudent_Click" MouseEnter="btnCreateStudent_MouseEnter" MouseLeave="btnCreateStudent_MouseLeave" IsDefault="True"/>
+        <Button x:Name="btnClear" Content="Clear" HorizontalAlignment="Left" Margin="436,217,0,0" VerticalAlignment="Top" Height="54" Width="162" Click="btnClear_Click" IsCancel="True"/>
 
     </Grid>
 </Window>
