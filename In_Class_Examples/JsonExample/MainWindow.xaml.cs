@@ -32,6 +32,8 @@ namespace JsonExample
 
             List<Person> people = JsonConvert.DeserializeObject<List<Person>>(json);
 
+            lstPeople.ItemsSource = people;
+            // or this way, don't need both
             foreach (Person person in people)
             {
                 lstPeople.Items.Add(person);
