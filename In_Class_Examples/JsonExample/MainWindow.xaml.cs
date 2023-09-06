@@ -26,18 +26,21 @@ namespace JsonExample
         {
             InitializeComponent();
 
+            Uri urlToPicture = new Uri("https://i.pinimg.com/originals/46/80/a2/4680a2de3a69a4b18a876b8a7154d12a.jpg");
+            imgPicture.Source = new BitmapImage(urlToPicture);
+
             string json = File.ReadAllText("MOCK_DATA.json");
 
-            
+
 
             List<Person> people = JsonConvert.DeserializeObject<List<Person>>(json);
 
             lstPeople.ItemsSource = people;
             // or this way, don't need both
-            foreach (Person person in people)
-            {
-                lstPeople.Items.Add(person);
-            }
+            //foreach (Person person in people)
+            //{
+            //    lstPeople.Items.Add(person);
+            //}
         }
 
         private void lstPeople_MouseDoubleClick(object sender, MouseButtonEventArgs e)
