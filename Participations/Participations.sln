@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FirstWPFApplication", "Firs
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsonFromAFile", "JsonFromAFile\JsonFromAFile.csproj", "{A51DB35D-0277-4D08-9D7F-8F793F9FC46C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Json_ChuckNorrisJokes", "Json_ChuckNorrisJokes\Json_ChuckNorrisJokes.csproj", "{73FBB2C8-27E7-4701-9333-5A13420A8633}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A51DB35D-0277-4D08-9D7F-8F793F9FC46C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A51DB35D-0277-4D08-9D7F-8F793F9FC46C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A51DB35D-0277-4D08-9D7F-8F793F9FC46C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73FBB2C8-27E7-4701-9333-5A13420A8633}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73FBB2C8-27E7-4701-9333-5A13420A8633}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73FBB2C8-27E7-4701-9333-5A13420A8633}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73FBB2C8-27E7-4701-9333-5A13420A8633}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
