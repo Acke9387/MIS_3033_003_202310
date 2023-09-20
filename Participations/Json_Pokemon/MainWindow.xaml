@@ -1,0 +1,23 @@
+﻿<Window x:Class="Json_Pokemon.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Json_Pokemon"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Background>
+        <ImageBrush ImageSource="https://assets.pokemon.com//assets/cms2/img/misc/virtual-backgrounds/masters/forest.jpg"/>
+    </Window.Background>
+    <Grid>
+        <ComboBox x:Name="cboPokemen" HorizontalAlignment="Center" Margin="0,105,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Select a Pokemon:" HorizontalAlignment="Left" Margin="209,103,0,0" VerticalAlignment="Top" BorderBrush="#FFF6EBEB" Background="#FFE29C9C"/>
+        <Label Content="Height:" HorizontalAlignment="Left" Margin="117,259,0,0" VerticalAlignment="Top" BorderBrush="#FFF6EBEB" Background="#FFE29C9C"/>
+        <Label Content="Weight:" HorizontalAlignment="Left" Margin="117,314,0,0" VerticalAlignment="Top" BorderBrush="#FFF6EBEB" Background="#FFE29C9C"/>
+        <TextBlock x:Name="txtName" HorizontalAlignment="Left" Margin="181,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="1.051,0.639" Height="55" Width="495" FontSize="36" TextAlignment="Center" Background="#FFE9F93C"/>
+        <TextBox x:Name="txtHeight" HorizontalAlignment="Left" Margin="181,254,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Height="36" IsEnabled="False"/>
+        <TextBox x:Name="txtWeight" HorizontalAlignment="Left" Margin="181,309,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Height="36" IsEnabled="False"/>
+        <Image x:Name="imgPoke" HorizontalAlignment="Left" Height="155" Margin="497,254,0,0" VerticalAlignment="Top" Width="260"/>
+
+    </Grid>
+</Window>
