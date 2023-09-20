@@ -27,6 +27,7 @@ namespace Json_ChuckNorrisJokes
             InitializeComponent();
 
             cboCategories.Items.Add("All");
+            cboCategories.SelectedIndex = 0;
 
             using (var client = new HttpClient())
             {
@@ -39,8 +40,28 @@ namespace Json_ChuckNorrisJokes
                 {
                     cboCategories.Items.Add(category);
                 }
+            }
 
+        }
 
+        private void btnGetJoke_Click(object sender, RoutedEventArgs e)
+        {
+            string category = cboCategories.SelectedItem.ToString();
+            string url = @"https://api.chucknorris.io/jokes/random";
+
+            if (category != "All")
+            {
+                url = $"https://api.chucknorris.io/jokes/random?category={category}";
+            }
+
+            using (var client = new HttpClient())
+            {
+
+                string json = client.GetStringAsync(url).Result;
+
+                var joke = JsonConvert.DeserializeObject<ChuckNorrisJokeAPI>(json);
+                txtJoke.Text = joke.value;
+                
             }
 
         }

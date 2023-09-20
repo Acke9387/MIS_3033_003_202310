@@ -10,6 +10,7 @@
         <ComboBox x:Name="cboCategories" HorizontalAlignment="Left" Margin="182,132,0,0" VerticalAlignment="Top" Width="120"/>
         <Label Content="Select a category" HorizontalAlignment="Left" Margin="57,128,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtJoke" Margin="426,128,10,10" TextWrapping="Wrap"/>
+        <Button x:Name="btnGetJoke" Content="Get Joke" HorizontalAlignment="Left" Margin="157,217,0,0" VerticalAlignment="Top" Height="59" Width="107" Click="btnGetJoke_Click"/>
 
     </Grid>
 </Window>
