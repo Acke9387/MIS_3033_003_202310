@@ -43,5 +43,10 @@ namespace Json_Pokemon
             
 
         }
+
+        private void cboPokemen_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

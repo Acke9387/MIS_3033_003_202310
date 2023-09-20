@@ -10,7 +10,7 @@
         <ImageBrush ImageSource="https://assets.pokemon.com//assets/cms2/img/misc/virtual-backgrounds/masters/forest.jpg"/>
     </Window.Background>
     <Grid>
-        <ComboBox x:Name="cboPokemen" HorizontalAlignment="Center" Margin="0,105,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="cboPokemen" HorizontalAlignment="Center" Margin="0,105,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cboPokemen_SelectionChanged"/>
         <Label Content="Select a Pokemon:" HorizontalAlignment="Left" Margin="209,103,0,0" VerticalAlignment="Top" BorderBrush="#FFF6EBEB" Background="#FFE29C9C"/>
         <Label Content="Height:" HorizontalAlignment="Left" Margin="117,259,0,0" VerticalAlignment="Top" BorderBrush="#FFF6EBEB" Background="#FFE29C9C"/>
         <Label Content="Weight:" HorizontalAlignment="Left" Margin="117,314,0,0" VerticalAlignment="Top" BorderBrush="#FFF6EBEB" Background="#FFE29C9C"/>
