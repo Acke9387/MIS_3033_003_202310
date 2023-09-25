@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Json_Pokemon"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Pokemon Info" Height="450" Width="800">
     <Window.Background>
         <ImageBrush ImageSource="https://assets.pokemon.com//assets/cms2/img/misc/virtual-backgrounds/masters/forest.jpg"/>
     </Window.Background>
     <Grid>
-        <ComboBox x:Name="cboPokemen" HorizontalAlignment="Center" Margin="0,105,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cboPokemen_SelectionChanged"/>
+        <ComboBox x:Name="cboPokemen" HorizontalAlignment="Left" Margin="332,105,0,0" VerticalAlignment="Top" Width="194" SelectionChanged="cboPokemen_SelectionChanged" Height="24"/>
         <Label Content="Select a Pokemon:" HorizontalAlignment="Left" Margin="209,103,0,0" VerticalAlignment="Top" BorderBrush="#FFF6EBEB" Background="#FFE29C9C"/>
         <Label Content="Height:" HorizontalAlignment="Left" Margin="117,259,0,0" VerticalAlignment="Top" BorderBrush="#FFF6EBEB" Background="#FFE29C9C"/>
         <Label Content="Weight:" HorizontalAlignment="Left" Margin="117,314,0,0" VerticalAlignment="Top" BorderBrush="#FFF6EBEB" Background="#FFE29C9C"/>
@@ -18,6 +18,7 @@
         <TextBox x:Name="txtHeight" HorizontalAlignment="Left" Margin="181,254,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Height="36" IsEnabled="False"/>
         <TextBox x:Name="txtWeight" HorizontalAlignment="Left" Margin="181,309,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Height="36" IsEnabled="False"/>
         <Image x:Name="imgPoke" HorizontalAlignment="Left" Height="155" Margin="497,254,0,0" VerticalAlignment="Top" Width="260"/>
+        <Button x:Name="btnRotate" Content="Rotate" HorizontalAlignment="Left" Margin="400,327,0,0" VerticalAlignment="Top" Height="97" Width="97" Click="btnRotate_Click"/>
 
     </Grid>
 </Window>

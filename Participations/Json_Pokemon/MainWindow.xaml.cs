@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -22,6 +23,9 @@ namespace Json_Pokemon
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Pokemon api = null;
+        bool showFront = true;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -33,6 +37,11 @@ namespace Json_Pokemon
                 string pokemonJson = client.GetStringAsync(url).Result;
 
                 PokemonApi api = JsonConvert.DeserializeObject<PokemonApi>(pokemonJson);
+
+                //foreach (var pokemon in api.results)
+                //{
+                //    cboPokemen.Items.Add(pokemon);
+                //}
 
                 api.results.OrderBy(pokemon => pokemon.name).ToList().ForEach(pokemon =>
                 {
@@ -47,6 +56,40 @@ namespace Json_Pokemon
         private void cboPokemen_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+            PokemonResult selected = (PokemonResult)cboPokemen.SelectedItem;
+
+            if(selected == null) { return; }
+
+            using (var client = new HttpClient())
+            {
+                string pokemonJson = client.GetStringAsync(selected.url).Result;
+
+                api = JsonConvert.DeserializeObject<Pokemon>(pokemonJson);
+                txtHeight.Text = api.height.ToString();
+                txtName.Text = api.name;
+                txtWeight.Text = api.weight.ToString();
+
+                imgPoke.Source = new BitmapImage(new Uri(api.sprites.front));
+                showFront = false;
+            }
+
+        }
+
+        private void btnRotate_Click(object sender, RoutedEventArgs e)
+        {
+            if (showFront == true)
+            {
+                imgPoke.Source = new BitmapImage(new Uri(api.sprites.front));
+                showFront = false;
+            }
+            else
+            {
+                if (api.sprites.back_default != null)
+                {
+                    imgPoke.Source = new BitmapImage(new Uri(api.sprites.back_default)); 
+                }
+                showFront = true;
+            }
         }
     }
 }
