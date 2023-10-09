@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsonFromAFile", "JsonFromAF
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Json_ChuckNorrisJokes", "Json_ChuckNorrisJokes\Json_ChuckNorrisJokes.csproj", "{73FBB2C8-27E7-4701-9333-5A13420A8633}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Json_Pokemon", "Json_Pokemon\Json_Pokemon.csproj", "{43C0BF9B-42F0-41D8-81F1-5BDDAA5E5EBB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Json_Pokemon", "Json_Pokemon\Json_Pokemon.csproj", "{43C0BF9B-42F0-41D8-81F1-5BDDAA5E5EBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database_SELECTing", "Database_SELECTing\Database_SELECTing.csproj", "{D3BF3762-B500-4318-A70F-B364C1721696}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{43C0BF9B-42F0-41D8-81F1-5BDDAA5E5EBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43C0BF9B-42F0-41D8-81F1-5BDDAA5E5EBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43C0BF9B-42F0-41D8-81F1-5BDDAA5E5EBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3BF3762-B500-4318-A70F-B364C1721696}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3BF3762-B500-4318-A70F-B364C1721696}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3BF3762-B500-4318-A70F-B364C1721696}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3BF3762-B500-4318-A70F-B364C1721696}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
