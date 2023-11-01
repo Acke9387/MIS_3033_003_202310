@@ -1,0 +1,27 @@
+﻿@model WebVersionOfChuckNorris.Models.ChuckNorrisAPI
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Chuck Norris Random Joke</h1>
+
+<img src="@Model.icon_url" alt="Chuck Norris Gif" />
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            URL
+        </dt>
+        <dd class = "col-sm-10">
+            @Model.url
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.value)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.value)
+        </dd>
+    </dl>
+</div>

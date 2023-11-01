@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsonExample", "JsonExample\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebServiceExample", "WebServiceExample\WebServiceExample.csproj", "{BD41D241-FDEE-4A2D-9444-EFD4B11373CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFramework_ReadingFromDatabase", "EntityFramework_ReadingFromDatabase\EntityFramework_ReadingFromDatabase.csproj", "{5F4F12EE-7B3D-4BEE-BE71-F1659634FDB4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFramework_ReadingFromDatabase", "EntityFramework_ReadingFromDatabase\EntityFramework_ReadingFromDatabase.csproj", "{5F4F12EE-7B3D-4BEE-BE71-F1659634FDB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebVersionOfChuckNorris", "WebVersionOfChuckNorris\WebVersionOfChuckNorris.csproj", "{6E961FDE-34EA-4F63-A035-219ECFF84549}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{5F4F12EE-7B3D-4BEE-BE71-F1659634FDB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F4F12EE-7B3D-4BEE-BE71-F1659634FDB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F4F12EE-7B3D-4BEE-BE71-F1659634FDB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E961FDE-34EA-4F63-A035-219ECFF84549}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E961FDE-34EA-4F63-A035-219ECFF84549}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E961FDE-34EA-4F63-A035-219ECFF84549}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E961FDE-34EA-4F63-A035-219ECFF84549}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
