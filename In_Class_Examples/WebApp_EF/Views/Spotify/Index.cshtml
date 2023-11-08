@@ -1,0 +1,112 @@
+﻿@model IEnumerable<WebApp_EF.Models.Spotify>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Spotify Songs</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Artist)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TopGenre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Year)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BeatsPerMinute)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Energy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Danceability)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Loudness)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Liveness)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Valence)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Duration)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Acousticness)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Speechiness)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Popularity)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Artist)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TopGenre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Year)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BeatsPerMinute)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Energy)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Danceability)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Loudness)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Liveness)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Valence)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Duration)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Acousticness)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Speechiness)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Popularity)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Index">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Index">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Index">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
